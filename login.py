@@ -73,6 +73,7 @@ def check_dup():
     exists = bool(db.users.find_one({"username": username_receive}))
     return jsonify({'result': 'success', 'exists': exists})
 
+
 @login_api.route('/sign_up/check_nickname', methods=['POST'])
 def check_nickname():
     # 데이터베이스에 같은 nickname이 존재하는지 확인
